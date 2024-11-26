@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap"
+    rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bokkmark</title>
+
+  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <main class="py-5 vh-100 ">
+    <div class="container d-flex flex-column justify-content-center align-items-center">
+      <h1 class="py-2">Bookmarker</h1>
+
+      <div class="mt-5 py-4 p-3 w-100 d-flex flex-column align-items-center justify-content-center gap-4 bookmark">
+        <h2><i class="fa-solid fa-bookmark"></i> Bookmark your favorite sites <i class="fa-solid fa-bookmark"></i></h2>
+        <div class="d-flex flex-column w-100 "  >
+          <label class="pb-2 fw-semibold" for="siteName"> <i class="fa-solid fa-book-bookmark pe-2"></i> Site
+            Name</label>
+          <input oninput="validation(this)" class="form-control" type="text" id="siteName" name="siteName"
+            placeholder="Bookmark Name">
+        </div>
+        <div class="d-flex flex-column w-100">
+          <label class="pb-2 fw-semibold" for="siteUrl"><i class="fa-solid fa-link pe-2"></i>Site URL</label>
+          <input oninput="validation(this)" class="form-control" type="url" id="siteUrl" name="siteUrl"
+            placeholder="Website URL">
+        </div>
+        <button  onclick="addSite()" class="btn submit px-5">Submit</button>
+
+
+      </div>
+
+      <table class="table text-center mt-4 ">
+        <thead>
+          <tr>
+            <th>Index</th>
+            <th>Website Name</th>
+            <th>Visit</th>
+            <th>Delete</th>
+          </tr>
+        <tbody id="content">
+
+        </tbody>
+        </thead>
+      </table>
+    </div>
+    <div id="box" class="box container rounded-2 position-absolute start-50 top-50 translate-middle z-3 d-none"
+      id="warning">
+      <div class=" d-flex justify-content-between align-items-center mb-4">
+        <div class="ps-2 d-flex gap-2">
+          <span class="rounded-circle red"></span>
+          <span class="rounded-circle yellow"></span>
+          <span class="rounded-circle green"></span>
+        </div>
+        <button onclick="CloseMessage()" id="closeBtn" class="btn border-0"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <p class="m-0 pb-2">
+        Site Name or Url is not valid, Please follow the rules below :
+      </p>
+
+      <ul style="list-style-type: none;" class="p-0">
+        <li><i class="fa-solid fa-circle-arrow-right"></i> Site name must contain at least 3 characters</li>
+        <li><i class="fa-solid fa-circle-arrow-right"></i> Site URL must be a valid one</li>
+      </ul>
+
+
+    </div>
+  </main>  
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script src="js/index.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+
+  
+</body>
+
+</html>
